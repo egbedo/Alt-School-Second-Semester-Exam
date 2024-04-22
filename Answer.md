@@ -58,3 +58,10 @@ After writing the bash script, its time to edit the playbook to run the script o
 Those are the steps taken to set up and install LAMP and running on a slave node from master with a playbook.
  
 
+## Challenges faced during this exercise.
+This exam was not without challenges as I faced a number of them in the process of getting the application to be accessible. The challenges helped me get more knowlege of the whole concept that i've learned so far and I was able to apply them to my exam and get it accessible. 
+
+1. The first one was getting it to point to my apache2 website but not to the laravel home.
+![apache](./Images/WhatsApp%20Image%202024-04-18%20at%2013.43.07_c58db263.jpg)
+
+2. After solving the first problem I had, I ran the playbook and got another challenge, my playbook would just run and not execute with no error message, nothing. I researched and learned that prompts in the installation of those packages would lead too the ansible delaying because it would expext a response. I took a little time and I realized I had to run the commands in a test environment step by step so I can find out where the prompts were and other errors as well. I ran it in a test evnironment(slave2) as seen below and got it, then automated it in my playbook and finally ran it successfully in my ansible playbook 

@@ -13,14 +13,14 @@
       command: /home/vagrant/LAMPinstall.sh
 
 
- - name: Verify PHP application accesibilty
-      shell: "curl http://192.168.33.25/var/www/laravel"
-      register: result
-      ignore_errors: yes
+  - name: Verify PHP application accesibilty
+  shell: "curl http://192.168.33.25/var/www/laravel"
+  register: result
+  ignore_errors: yes
 
-    - name: Show output
-      debug: 
-        var: result.content
+- name: Show output
+  debug: 
+    var: result.stdout
 
   - name: Create cron job
       cron:
